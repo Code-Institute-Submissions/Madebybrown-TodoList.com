@@ -13,3 +13,4 @@ class TaskList(ListView):
 class DetailTask(DetailView):
     model = Task
     template_name = 'base/task_detail.html'
+    context_object_name = 'task'
