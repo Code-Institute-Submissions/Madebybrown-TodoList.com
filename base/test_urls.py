@@ -12,3 +12,7 @@ class TestUrls(SimpleTestCase):
     def test_register_url_is_resolved(self):
         url = reverse('register')
         self.assertEquals(resolve(url).func.view_class, RegisterPage)
+
+    def test_tasks_url_is_resolved(self):
+        url = reverse('tasks')
+        self.assertEquals(resolve(url).func.view_class, TaskList)
